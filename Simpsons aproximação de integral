@@ -1,0 +1,39 @@
+# Simpsons aproximação de integral pra decimais
+
+
+
+b = int(input("Insira o limite superior"))
+a = int(input("Insira o limite inferior"))
+
+y = lambda x: (x**(1/2)) #Função cuja a integral vai ser aproximada
+
+div = 0.05 
+# div é o tamanho das divisões escolhidas, quanto menor, mais preciso.
+
+x = a + div
+r = 0
+g = 0
+l = 0
+
+while x < b:
+    
+    l = l + 1 #Contador que define par ou ímpar
+    
+    if (l/2) == int(l/2):
+        #print(x)
+        r = r + y(x)
+        x = x + div
+        x = round(x, 3)
+        
+
+        
+    else:
+        #print(x)
+        g = g + y(x)
+        x = x + div
+        x = round(x, 3)
+        
+print(l)
+#print(r, g)
+h = (b-a)/l
+print((h/3)*(y(a) + y(b) + 2*r + 4*g)) #aproximação 

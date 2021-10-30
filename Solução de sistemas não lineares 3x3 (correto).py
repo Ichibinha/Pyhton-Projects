@@ -24,9 +24,7 @@ s = [0, 0, 0]
 inter = 0
 
 
-# Professor, eu não sei se você lê os programas. Mas, o método estava dando errado, pois na equação 3 
-# eu tinha deixado no formato em que z é negativo, e por isso o método estava divergindo.
-# Por quê isso acontece?
+
 def F(lx, ly, lz):
     b = [0, 0, 0]
     b[0] = lx**2 + ly**2 + lz**2 - 4
